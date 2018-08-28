@@ -1,4 +1,5 @@
 ﻿using System;
+using riddlerQuiltC_.Models;
 
 namespace riddlerQuiltC_
 {
@@ -6,7 +7,10 @@ namespace riddlerQuiltC_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random RandomGenerator = new Random();
+            var FabricSquare1 = new FabricSquare(RandomGenerator);
+
+            Console.WriteLine(FabricSquare1.Color);
         }
     }
 }
