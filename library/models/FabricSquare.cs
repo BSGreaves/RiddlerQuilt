@@ -6,12 +6,16 @@ namespace riddlerQuiltC_.Models
     public class FabricSquare 
     {
         public string Color { get; }
-        public FabricSquare(Random randomGenerater)
+        public int XCoordinate { get;} 
+        public int YCoordinate { get; }
+        public FabricSquare(Random randomGenerater, int xCoordinate, int yCoordinate)
         {
-            Color = GetRandomColor(randomGenerater);
+            Color = GenerateRandomColor(randomGenerater);
+            XCoordinate = xCoordinate;
+            YCoordinate = xCoordinate;
         }
 
-        public string GetRandomColor(Random randomGenerater)
+        public string GenerateRandomColor(Random randomGenerater)
         {
              return PossibleColors[randomGenerater.Next(PossibleColors.Count)];
         }
